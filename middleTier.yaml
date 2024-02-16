@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: middleTier
+spec:
+  replicas: 20
+  selector:
+    matchLabels:
+      app: middleTier
+  template:
+    metadata:
+      labels:
+        app: middleTier
+    spec:
+      containers:
+        - name: inflate
+          image: mcr.microsoft.com/oss/kubernetes/pause:3.6
+          resources:
+            requests:
+              memory: "800Mi"
+              cpu: "2"
+            limits:
+              memory: "800Mi"
+              cpu: "2"
