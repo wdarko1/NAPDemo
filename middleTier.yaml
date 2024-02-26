@@ -13,8 +13,10 @@ spec:
         app: middleTier
     spec:
       containers:
-        - name: inflate
-          image: mcr.microsoft.com/oss/kubernetes/pause:3.6
+        - name: stress
+          image: progrium/stress
+          args: ["--cpu", "2", "--vm-bytes", "800M"]
+
           resources:
             requests:
               memory: "800Mi"

@@ -13,8 +13,9 @@ spec:
         app: frontend
     spec:
       containers:
-        - name: inflate
-          image: mcr.microsoft.com/oss/kubernetes/pause:3.6
+        - name: stress
+          image: progrium/stress
+          args: ["--cpu", "1", "--vm-bytes", "200M"]
           resources:
             requests:
               memory: "200Mi"
