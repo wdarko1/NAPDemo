@@ -15,7 +15,7 @@ spec:
       containers:
         - name: stress
           image: progrium/stress
-          args: ["--cpu", "2", "--vm-bytes", "800M"]
+          args: ["--cpu", "2", "--vm-bytes", "800000000"]
 
           resources:
             requests:
