@@ -16,7 +16,7 @@ spec:
         - name: stress
           image: wdhif/stress-ng
           args:
-            ["--aggressive", "--cpu", "1", "--vm", "1", "--vm-bytes", "200M"]
+            ["--aggressive", "--cpu", "1", "--vm", "1", "--vm-bytes", "180M"]
           resources:
             requests:
               memory: "200Mi"
