@@ -14,8 +14,9 @@ spec:
     spec:
       containers:
         - name: stress
-          image: progrium/stress
-          args: ["--cpu", "4", "--vm-bytes", "2000000000"]
+          image: wdhif/stress-ng
+          args:
+            ["--aggressive", "--cpu", "4", "--vm", "4", "--vm-bytes", "500M"]
           resources:
             requests:
               memory: "2000Mi"

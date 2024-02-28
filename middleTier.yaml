@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: middleTier
+  name: middletier
 spec:
   replicas: 20
   selector:
@@ -14,8 +14,9 @@ spec:
     spec:
       containers:
         - name: stress
-          image: progrium/stress
-          args: ["--cpu", "2", "--vm-bytes", "800000000"]
+          image: wdhif/stress-ng
+          args:
+            ["--aggressive", "--cpu", "2", "--vm", "4", "--vm-bytes", "200M"]
 
           resources:
             requests:
