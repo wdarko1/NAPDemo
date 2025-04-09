@@ -1,6 +1,6 @@
 # This example NodePool will provision basic general purpose instances
 ---
-apiVersion: karpenter.sh/v1beta1
+apiVersion: karpenter.sh/v1
 kind: NodePool
 metadata:
     name: default

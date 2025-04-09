@@ -4,7 +4,7 @@ metadata:
   name: inflate
   namespace: workshop
 spec:
-  replicas: 8
+  replicas: 0
   selector:
     matchLabels:
       app: inflate
@@ -19,7 +19,6 @@ spec:
           image: public.ecr.aws/eks-distro/kubernetes/pause:3.7
           resources:
             requests:
-              memory: 1Gi
               cpu: 1
       nodeSelector:
         eks-immersion-team: my-team
